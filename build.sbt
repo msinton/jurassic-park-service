@@ -3,7 +3,8 @@ scalafixDependencies in ThisBuild += "com.nequissimus" %% "sort-imports" % "0.2.
 lazy val scalaSettings = Seq(
   scalaVersion := "2.13.0",
   scalacOptions ++= Seq(
-    "-Yrangepos" // required by SemanticDB compiler plugin
+    "-Yrangepos", // required by SemanticDB compiler plugin
+    "-Ywarn-unused" // required for RemoveUnused
   )
 )
 

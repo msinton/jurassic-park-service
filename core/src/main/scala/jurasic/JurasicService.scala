@@ -1,12 +1,12 @@
 package jurasic
 
-import cats.syntax.either._
-import cats.syntax.option._
-import cats.syntax.functor._
-import cats.instances.either._
-
-import scala.util.Try
 import scala.util.Random
+import scala.util.Try
+
+import cats.instances.either._
+import cats.syntax.either._
+import cats.syntax.functor._
+import cats.syntax.option._
 
 object Service extends App {
 
