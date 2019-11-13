@@ -1,0 +1,10 @@
+target/
+
+.bloop/
+.metals/
+
+*.log
+
+.java-version
+.jvmopts
+tmp/
