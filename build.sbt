@@ -34,7 +34,7 @@ lazy val root = project
 lazy val core = project
   .in(file("core"))
   .settings(
-    moduleName := "jurasic-park-service",
+    moduleName := "jurassic-park-service",
     name := moduleName.value,
     scalaSettings,
     commonSettings,
