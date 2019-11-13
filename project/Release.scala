@@ -29,6 +29,7 @@ object Release extends AutoPlugin {
       publishMavenStyle := true,
       publishArtifact in Test := false,
       pomIncludeRepository := (_ => false),
+      publishTo := Some(MavenCache("local-ivy", file(Path.userHome.absolutePath +"/.ivy2/local/"))),
       //   excludeFilter.in(headerSources) := HiddenFileFilter,
       developers := List(
         Developer(
