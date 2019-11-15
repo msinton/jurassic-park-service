@@ -10,20 +10,13 @@ object Dependencies extends AutoPlugin {
 
   val defaultDependencySettings: Seq[Def.Setting[_]] = {
 
-    val catsVersion = "2.0.0"
-
-    val kittens = Seq(
-      "org.typelevel" %% "cats-free" % catsVersion,
-      "org.typelevel" %% "kittens" % catsVersion
-    )
-
     val scalaTest = Seq(
       "org.scalatestplus" %% "scalatestplus-scalacheck" % "3.1.0.0-RC2",
       "org.typelevel" %% "discipline-scalatest" % "1.0.0-RC1"
     )
 
     Seq(
-      libraryDependencies ++= kittens,
+      libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0",
       libraryDependencies ++= {
         scalaTest
       }.map(_ % Test)
