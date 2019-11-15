@@ -29,7 +29,6 @@ lazy val root = project
     console in Test := (console in (core, Test)).value
   )
   .aggregate(core)
-  .withReleaseNoPublish
 
 lazy val core = project
   .in(file("core"))
@@ -41,12 +40,10 @@ lazy val core = project
     testSettings
   )
   .withDependencies
-  .withRelease
 
 def addCommandsAlias(name: String, values: List[String]) =
   addCommandAlias(name, values.mkString(";", ";", ""))
 
-// TODO apply to test sources
 addCommandsAlias(
   "tidy",
   List(
